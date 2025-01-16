@@ -102,6 +102,62 @@
       </div>
     </div>
 
+    <!-- Filtrage par catégorie avec des cases à cocher -->
+    <div class="mb-4">
+        <h4>Filtrage spécifique</h4>
+    
+        <!-- Categorie Porte -->
+        <div>
+        <h5>Portée</h5>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="porte_courte" value="court" />
+            <label class="form-check-label" for="porte_courte">Courte</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="porte_moyenne" value="moyenne" />
+            <label class="form-check-label" for="porte_moyenne">Moyenne</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="porte_long" value="long" />
+            <label class="form-check-label" for="porte_long">Long</label>
+        </div>
+        </div>
+    
+        <!-- Categorie Prise -->
+        <div>
+        <h5>Prise</h5>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="prise_poing" value="arme-de-poing" />
+            <label class="form-check-label" for="prise_value_1">Arme de Poing</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="prise_epaule" value="arme-d-epaule" />
+            <label class="form-check-label" for="prise_value_2">Arme à l'épaule</label>
+        </div>
+        </div>
+    
+        <!-- Categorie Mécanisme -->
+        <div>
+        <h5>Mécanisme</h5>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mecanisme_repetition-manuelle" value="repetition-manuelle" />
+            <label class="form-check-label" for="mecanisme_value_1">Répetition manuelle</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mecanisme_tire-unique" value="tire-unique" />
+            <label class="form-check-label" for="mecanisme_value_2">Tire unique</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mecanisme_automatique" value="full-auto" />
+            <label class="form-check-label" for="mecanisme_value_3">automatique</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mecanisme_Semi-automatique" value="semi-auto" />
+            <label class="form-check-label" for="mecanisme_value_4">Semi-automatique</label>
+        </div>
+        </div>
+    </div>
+
     <!-- Search Bar -->
     <div class="input-group mb-4">
         <input type="text" id="searchBox" class="form-control" placeholder="Search weapons...">
@@ -111,10 +167,11 @@
     <table>
         <thead>
             <tr>
+                <th>Image</th>
                 <th>Modèle</th>
                 <th>Catégorie</th>
                 <th>Mode</th>
-                <th>Canon</th>
+                <th>Projectile</th>
                 <th>Utilisation</th>
             </tr>
         </thead>
