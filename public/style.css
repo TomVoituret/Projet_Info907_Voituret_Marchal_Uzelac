@@ -1,24 +1,118 @@
+/* Base Font */
 body {
-  background: url('https://images4.alphacoders.com/194/194934.jpg') no-repeat center center fixed;
-  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #343a40 !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Search Bar */
+.input-group {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#searchBox {
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#searchButton {
+  border-radius: 0 20px 20px 0;
+  background-color: #ffc107;
+  border: none;
+}
+
+/* Categories Section */
+#ontology {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#ontology h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#ontology .list-group-item {
+  font-size: 1.1rem;
+  color: #555;
+  border: none;
+  padding: 12px 15px;
+  transition: background-color 0.3s ease;
+}
+
+#ontology .list-group-item:hover {
+  background-color: #ffc107;
   color: white;
 }
 
+/* Cards Styling */
 .card {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.list-group-item {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#ontology h3, #results h3 {
-  color: #ffc107;
+.card-img-top {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
 }
 
-.weapon-icon {
-  width: 20px;
-  height: 20px;
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .input-group {
+    width: 100%;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
 }
