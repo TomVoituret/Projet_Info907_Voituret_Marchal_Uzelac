@@ -1,0 +1,32 @@
+{
+    "type": "Weapon",
+    "categories": [
+      {
+        "name": "Melee",
+        "subcategories": [
+          {
+            "name": "Sword",
+            "details": { "material": "Steel", "length": "1m" }
+          },
+          {
+            "name": "Axe",
+            "details": { "material": "Iron", "weight": "2kg" }
+          }
+        ]
+      },
+      {
+        "name": "Ranged",
+        "subcategories": [
+          {
+            "name": "Bow",
+            "details": { "range": "50m", "material": "Wood" }
+          },
+          {
+            "name": "Gun",
+            "details": { "caliber": "9mm", "range": "100m" }
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,13 @@
+Uzelac Yvann
+Marchal Enzo
+Voituret Tom
+
+
+Application POC pour recherche ontologique sur les armes à feu.
+fait sous JS avec Node.
+
+
+Lancement de l'application : 
+    $ node server.js
+
+la page web se trouvera normalement sur http://localhost:3000
