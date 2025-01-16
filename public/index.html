@@ -47,12 +47,7 @@
       </nav>
     </header>
 
-    <!-- Search Bar -->
-    <div class="input-group mb-4">
-      <input type="text" id="searchBox" class="form-control" placeholder="Search weapons...">
-      <button id="searchButton" class="btn btn-warning">Search</button>
-    </div>
-
+    
     <!-- Weapon Categories -->
     <div id="ontology" class="mb-4">
       <h3>Categories</h3>
@@ -106,6 +101,28 @@
         </div>
       </div>
     </div>
+
+    <!-- Search Bar -->
+    <div class="input-group mb-4">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search weapons...">
+        <button id="searchButton" class="btn btn-warning">Search</button>
+    </div>
+
+      
+    <table>
+        <thead>
+            <tr>
+                <th>Modèle</th>
+                <th>Catégorie</th>
+                <th>Mode</th>
+                <th>Canon</th>
+                <th>Utilisation</th>
+            </tr>
+        </thead>
+        <tbody id="armesTableBody">
+            <!-- Les données seront insérées ici -->
+        </tbody>
+    </table>
   </div>
 
   <!-- Bootstrap JS -->

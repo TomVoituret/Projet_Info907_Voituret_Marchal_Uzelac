@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tableBody = document.getElementById('armesTableBody');
     const searchInput = document.getElementById('searchInput');
-
+    let dataGlobal = {}
     // Fonction pour récupérer les données depuis le serveur
     const fetchData = async () => {
         try {
             const response = await fetch('/api/armes');
             const data = await response.json();
+            dataGlobal = data
             return data;
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -32,19 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fonction pour filtrer les données
     const filterData = (data, query) => {
-        return data.filter(arme => 
-            arme.modele.toLowerCase().includes(query.toLowerCase()) ||
-            Object.keys(arme.categorie).some(cat => cat.toLowerCase().includes(query.toLowerCase()) && arme.categorie[cat] === 1)
-        );
+        return data.filter(arme => {
+            // Vérifier si 'modele' est bien une chaîne de caractères avant d'utiliser toLowerCase()
+            const modele = (arme.modele && typeof arme.modele === 'string') ? arme.modele.toLowerCase() : '';
+            
+            return modele.includes(query.toLowerCase()) || 
+                   Object.keys(arme.categorie).some(cat => 
+                     cat.toLowerCase().includes(query.toLowerCase()) && arme.categorie[cat] === 1
+                   );
+        });
     };
 
-    // Gestion de la recherche
-    searchInput.addEventListener('input', async () => {
-        const query = searchInput.value;
-        const data = await fetchData();
-        const filteredData = filterData(data, query);
-        renderTable(filteredData);
-    });
+
+// Listener sur le bouton de recherche
+document.getElementById('searchButton').addEventListener('click', () => {
+    const query = document.getElementById('searchBox').value;
+    const filteredData = filterData(dataGlobal, query);
+    renderTable(filteredData); // Passe les données filtrées à la fonction renderTable
+});
+
+// Listener sur la touche "Entrée" dans le champ de recherche
+document.getElementById('searchBox').addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        const query = document.getElementById('searchBox').value;
+        const filteredData = filterData(dataGlobal, query);
+        renderTable(filteredData); // Passe les données filtrées à la fonction renderTable
+    }
+});
 
     // Chargement initial des données
     fetchData().then(data => renderTable(data));
