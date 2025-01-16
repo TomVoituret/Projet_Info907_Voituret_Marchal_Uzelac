@@ -1,15 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  #ontology .subcategory {
-    margin-left: 20px;
-  }
-  
-  .result {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
+  background: url('https://images4.alphacoders.com/194/194934.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+#ontology h3, #results h3 {
+  color: #ffc107;
+}
+
+.weapon-icon {
+  width: 20px;
+  height: 20px;
+}
