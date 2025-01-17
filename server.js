@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // Route pour renvoyer les données JSON
 app.get('/api/armes', (req, res) => {
-    const armes = require('./data/classified_data.json');
+    const armes = require('./data/classified_data_with_scraped_images.json');
     res.json(armes);
 });
 
