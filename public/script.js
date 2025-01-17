@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Gestion de la recherche
-    searchInput.addEventListener('input', async () => {
-        const query = searchInput.value;
-        const data = await fetchData();
-        const filteredData = filterData(data, query);
-        renderTable(filteredData);
-    });
+    // searchInput.addEventListener('input', async () => {
+    //     const query = searchInput.value;
+    //     const data = await fetchData();
+    //     const filteredData = filterData(data, query);
+    //     renderTable(filteredData);
+    // });
 
     // Chargement initial des données
     fetchData().then(data => renderTable(data));
