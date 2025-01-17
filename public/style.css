@@ -5,6 +5,26 @@ body {
   color: #333;
 }
 
+#resultContainer {
+  overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+}
+
+.result-table {
+  width: 100%; /* Fait en sorte que la table prenne toute la largeur disponible */
+  border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.result-table th {
+  background-color: #f4f4f4; /* Couleur d'arrière-plan pour le header */
+  text-align: left;
+}
+
+
 /* Navbar Styling */
 .navbar {
   background-color: #343a40 !important;
